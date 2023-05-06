@@ -35,6 +35,7 @@ cask "transmit"
 cask "tunnelblick"
 cask "slack"
 cask "docker"
+cask "syncthing"
 
 # mas
 mas "Amphetamine", id: 937984704
@@ -47,4 +48,3 @@ mas "Unsplash Wallpapers", id: 1284863847
 mas "Yoink", id: 457622435
 mas "Mirror Magnet", id: 1563698880
 mas "KakaoTalk", id: 869223134
-~                              
