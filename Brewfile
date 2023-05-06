@@ -1,13 +1,7 @@
-
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "1password/tap"
-tap "jkfran/killport"
-
 cask "1password-cli"
 cask "1password"
+tap "jkfran/killport"
 brew "jkfran/killport/killport"
 
 brew "autojump"
@@ -42,14 +36,15 @@ cask "tunnelblick"
 cask "slack"
 cask "docker"
 
-
 # mas
-mas "Amphetamine", 937984704
-mas "Checker", 1238750814
-mas "ColorSlurp", 1287239339
-mas "Keystroke Pro", 1572206224
-mas "Magnet", 441258766
-mas "WireGuard", 1451685025
-mas "Unsplash Wallpapers", 1284863847
-mas "Yoink", 457622435
-mas "Mirror Magnet", 1563698880
+mas "Amphetamine", id: 937984704
+mas "Checkor", id: 1238750814
+mas "ColorSlurp", id: 1287239339
+mas "Keystroke Pro", id: 1572206224
+mas "Magnet", id: 441258766
+mas "WireGuard", id: 1451685025
+mas "Unsplash Wallpapers", id: 1284863847
+mas "Yoink", id: 457622435
+mas "Mirror Magnet", id: 1563698880
+mas "KakaoTalk", id: 869223134
+~                              
