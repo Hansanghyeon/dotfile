@@ -74,3 +74,10 @@ cat brewfile
 ##### 업무용
 
 - Zeplin
+
+## syncting로 설정파일 동기화하기
+
+- Alfred 5
+- Karabiner element
+- Keyboard Maestro
+- PopClip
