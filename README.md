@@ -39,35 +39,35 @@ cat brewfile
 ## 설치할 애플리케이션
 
 ## brew mas
-Amphetamine
-Checkor
-ColorSlurp
-Keystroke Pro
-Magnet
-WireGuard
-Unsplash Wallpapers
-Yoink
-Mirror Magnet
+- Amphetamine
+- Checkor
+- ColorSlurp
+- Keystroke Pro
+- Magnet
+- WireGuard
+- Unsplash Wallpapers
+- Yoink
+- Mirror Magnet
 
 ### brew cask
-[1Password](https://formulae.brew.sh/cask/1password#default)
-[Alfred 5](https://formulae.brew.sh/cask/alfred#default)
-[Bartender 4](https://formulae.brew.sh/cask/banking-4#default)
-[Calendar 366 II](https://formulae.brew.sh/cask/calendar-366#default)
-[Cyberduck](https://formulae.brew.sh/cask/cyberduck#default)
-[Google Chrome](https://formulae.brew.sh/cask/google-chrome#default)
-[iTerm2](https://formulae.brew.sh/cask/iterm2#default)
-Karabiner-elements
-Keyboard Maestro
-Keka
-PopClip
-TablePlus
-Telegram
-Transmit
-Tunnelblick
-Visual Studio Code
-Slack
-Docker
+- [1Password](https://formulae.brew.sh/cask/1password#default)
+- [Alfred 5](https://formulae.brew.sh/cask/alfred#default)
+- [Bartender 4](https://formulae.brew.sh/cask/banking-4#default)
+- [Calendar 366 II](https://formulae.brew.sh/cask/calendar-366#default)
+- [Cyberduck](https://formulae.brew.sh/cask/cyberduck#default)
+- [Google Chrome](https://formulae.brew.sh/cask/google-chrome#default)
+- [iTerm2](https://formulae.brew.sh/cask/iterm2#default)
+- Karabiner-elements
+- Keyboard Maestro
+- Keka
+- PopClip
+- TablePlus
+- Telegram
+- Transmit
+- Tunnelblick
+- Visual Studio Code
+- Slack
+- Docker
 
 #### 업무용
 Zeplin
