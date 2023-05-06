@@ -48,3 +48,4 @@ mas "Unsplash Wallpapers", id: 1284863847
 mas "Yoink", id: 457622435
 mas "Mirror Magnet", id: 1563698880
 mas "KakaoTalk", id: 869223134
+mas "Calendar 366 II", id: 1265895169
