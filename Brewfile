@@ -23,6 +23,7 @@ cask "hyper"
 cask "tableplus"
 cask "transmit"
 cask "tunnelblick"
+brew "ccat"
 
 # killer app
 cask "alfred"
