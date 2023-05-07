@@ -30,7 +30,6 @@ cask "keyboard-maestro"
 cask "keka"
 cask "popclip"
 cask "tableplus"
-cask "telegram"
 cask "transmit"
 cask "tunnelblick"
 cask "slack"
@@ -49,3 +48,4 @@ mas "Yoink", id: 457622435
 mas "Mirror Magnet", id: 1563698880
 mas "KakaoTalk", id: 869223134
 mas "Calendar 366 II", id: 1265895169
+mas "telegram", id: 747648890
