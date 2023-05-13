@@ -24,6 +24,7 @@ cask "tableplus"
 cask "transmit"
 cask "tunnelblick"
 brew "ccat"
+brew "diff-so-fancy"
 
 # vim
 # vim search
