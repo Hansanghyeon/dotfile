@@ -25,6 +25,12 @@ cask "transmit"
 cask "tunnelblick"
 brew "ccat"
 
+# vim
+# vim search
+## deps
+brew "fd"
+brew "ripgrep"
+
 # killer app
 cask "alfred"
 cask "obsidian"
