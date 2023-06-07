@@ -1,31 +1,93 @@
-source $HOME/antigen.zsh
+#!/bin/zsh
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#common-aliases
+# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+ANTIGEN=$HOME/.antigen/
+# Antigne
+[ -f $ANTIGEN/antigen.zsh ] || git clone\
+  https://github.com/zsh-users/antigen.git $ANTIGEN
+if [[ -f $ANTIGEN/antigen.zsh ]]; then
+  source $ANTIGEN/antigen.zsh
+  antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle command-not-found
-antigen bundle autojump
-antigen bundle brew
+  # antigen update
+  # antigen selfupdate
+  #
+  if [ "$OSTYPE"="darwin16.0" ]; then
+    antigen bundle osx
+    antigen bundle ssh-agent
+    antigen bundle vscode
+    antigen bundle terminalapp # Set Apple Terminal.app resume directory
+    antigen bundle brew     # adds completion for the brew command
+  fi
+  if [ "$OSTYPE"="linux-gnu" ]; then
+    antigen bundle systemd
+    antigen bundle sudo        # Defined shortcut keys: [Esc] [Esc]
+  fi
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
+  antigen bundle git      # Enables the zsh completion from git
+  #antigen bundle git-extras# Enables the zsh completion from git
+  #antigen bundle git-flow # Support for git-flow completion
+  #antigen bundle coffee   # Completion plugin for CoffeeScript.
+  #antigen bundle cp       # ?
+  #antigen bundle dircycle # This is a small zle trick that lets you cycle your directory stack left or right using Ctrl+Shift+Left/Right
+  #antigen bundle gnu-utils
+  #antigen bundle history
+  #antigen bundle aws
+  #antigen bundle docker
+  #antigen bundle autopep8
+  #antigen bundle colorize # ccat command
+  #antigne bundle common-aliases # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#common-aliases
+  #antigen bundle history-substring-search # Press the UP/DOWN arrow key to select the nearest command 
+  #antigen bundle iwhois # iwhois servers using CNAMES via whois.geek.nz
+  #   To enabled agent forwarding support add the following to
+  #   your .zshrc file:
+  #
+  #     zstyle :omz:plugins:ssh-agent agent-forwarding on
+  #antigen bundle ssh-agent
+  #antigen bundle vagrant # vagrant zsh completion
+  #antigen bundle vundle  # vim vundle alias
+  #antigen bundle mvn     # maven completion
+  #antigen bundle npm     # npm completion
+  #antigen bundle bower   # bower completion
+  #antigen bundle copydir # Mac clipborad copy current directory
+  #antigen bundle copyfile    # Mac clipborad copy file
+  #antigen bundle dirpersist  # Make the dirstack more persistant for .zlogout
+  #antigen bundle docker      # Docker autocompletion
+  #antigen bundle emoji-clock # emoji-clock command
+  #antigen bundle fasd        # [v] [o] short hand command
+  #antigen bundle nyan        # telnet nayncat!
+  #antigen bundle systemadmin # aliases psmem hist10
+  #antigen bundle python      # aliase only?
+  #antigen bundle urltools    # urlencode
+  #antigen bundle xcode       # 
+  #antigen bundle profiles    # custom profile for the local machine and each domain
+  #antigen bundle z           # z command
+  antigen bundle command-not-found
+  antigen bundle common-aliases # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
 
-# Load the theme.
-antigen theme jackharrisonsherlock/common
+  
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen bundle zsh-users/zsh-completions
+  antigen bundle zsh-users/zsh-history-substring-search
+  #antigen bundle sharat87/autoenv
+  #antigen bundle zsh-users/zsh-syntax-highlighting
+  #antigen bundle zsh-users/zsh-history-substring-search
+  #antigen bundle zsh-users/zsh-completions src
+  antigen bundle zsh-users/zsh-autosuggestions
+  #antigen bundle tetsujin/zsh-function-mysql
+  #antigen bundle autojump # Enables autojump if installed with homebrew
+  #antigen bundle ruby
+  #antigen bundle rbenv
+  #antigen bundle bundler
+  #antigen bundle gem
+  #antigen bundle github
+  #antigen bundle mercurial
+  #antigen bundle virtualenv
+  #antigen bundle vi-mode
+  #antigen bundle node
+  #antigen bundle pip
 
-# Tell Antigen that you're done.
-antigen apply
-
-#################################
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# https://github.com/owenthereal/ccat
-alias cat='ccat'
+  antigen theme af-magic 
+fi
