@@ -91,5 +91,3 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
 
   antigen theme af-magic 
 fi
-
-alias cat="ccat"
