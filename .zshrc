@@ -36,7 +36,7 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
   #antigen bundle aws
   #antigen bundle docker
   #antigen bundle autopep8
-  #antigen bundle colorize # ccat command
+  antigen bundle colorize # ccat command
   #antigne bundle common-aliases # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#common-aliases
   #antigen bundle history-substring-search # Press the UP/DOWN arrow key to select the nearest command 
   #antigen bundle iwhois # iwhois servers using CNAMES via whois.geek.nz
@@ -91,3 +91,5 @@ if [[ -f $ANTIGEN/antigen.zsh ]]; then
 
   antigen theme af-magic 
 fi
+
+alias cat="ccat"
