@@ -5,4 +5,6 @@ source $HOME/.zshrc.antigen
 
 # Aliases
 alias cat="ccat"
-alias ls="ls -GlFta"
+# alias dc="docker-compose"
+# alias dps="docker ps"
+# alias gs="git status"
