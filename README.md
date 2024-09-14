@@ -16,8 +16,7 @@ WIP
 ### neovim
 
 > [!NOTE]  
-> neovim의 플러그인 추가 수정 커스텀하지 않는다.
-> main text editor는 IntelliJ 또는 vscode를 사용할 것이기 때문에 해키하게 커스텀하지 않는다.
+> 나의 메인 에디터는 IntelliJ 또는 vscode를 사용할 것이기 때문에 text editor는 해키하게 커스텀하지 않는다. (플러그인 추가 금지)
 
 neovim이 apt-get install로 설치하면 6.0 버전까지만 설치된다.
 9.0 버전을 다운로드 받기위해서
