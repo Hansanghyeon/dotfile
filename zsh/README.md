@@ -1,3 +1,12 @@
-zinit으로 관리하기
+## 관리
 
-https://github.com/zdharma-continuum/zinit
+zinit으로 zsh 통합관리
+
+## install
+
+1. https://github.com/zdharma-continuum/zinit#install
+
+```sh
+apt install zoxide
+```
+
