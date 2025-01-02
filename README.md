@@ -1,18 +1,16 @@
-## dotfile
-
 | application                    | Description                 |
 | ------------------------------ | --------------------------- |
 | Brewfile                       | Brew 설치 목록                |
 | [nvim](./nvim/README.md)       | neovim 설정                  |
-| [git](./git/README.md).        | git 설정                     |
-| [tmux](./tmux/README.md).      | tmux 설정                    |
+| [git](./git/README.md)         | git 설정                     |
+| [tmux](./tmux/README.md)       | tmux 설정                    |
 
 - **dotfile**은 해당 유저 폴더에 설치하는 것을 권장합니다.
   - 유저폴더에 설치하지 않을때는 `${HOME}/dotfile`을 모두 수정해주세요
 
-### OS공통
+## OS공통
 
-#### exa
+### exa
 
 https://github.com/ogham/exa
 
@@ -20,7 +18,7 @@ https://github.com/ogham/exa
 sudo apt install exa
 ```
 
-#### justfile
+### justfile
 
 ```
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
@@ -32,7 +30,7 @@ sudo apt update
 apt install just
 ```
 
-### Proxmox
+## Proxmox
 
 proxmox를 사용할때는 root유저를 기본으로 사용하도록 되어있어서 `sudo` 패키지가 설치되어있지 않다.
 
