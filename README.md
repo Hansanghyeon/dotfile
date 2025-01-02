@@ -1,3 +1,5 @@
+## dotfile
+
 | application                    | Description                 |
 | ------------------------------ | --------------------------- |
 | Brewfile                       | Brew 설치 목록                |
@@ -5,36 +7,38 @@
 | [git](./git/README.md).        | git 설정                     |
 | [tmux](./tmux/README.md).      | tmux 설정                    |
 
-## OS공통
+- **dotfile**은 해당 유저 폴더에 설치하는 것을 권장합니다.
+  - 유저폴더에 설치하지 않을때는 `${HOME}/dotfile`을 모두 수정해주세요
 
-- eza - https://denisrasulev.medium.com/eza-the-best-ls-command-replacement-9621252323e
+### OS공통
 
-### zsh
+#### exa
 
-WIP
+https://github.com/ogham/exa
 
-### neovim
-
-> [!NOTE]  
-> 나의 메인 에디터는 IntelliJ 또는 vscode를 사용할 것이기 때문에 text editor는 해키하게 커스텀하지 않는다. (플러그인 추가 금지)
-
-neovim이 apt-get install로 설치하면 6.0 버전까지만 설치된다.
-9.0 버전을 다운로드 받기위해서
-
-```shell
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage --appimage-extract
-./squashfs-root/AppRun --version
-
-# Optional: exposing nvim globally.
-sudo mv squashfs-root /
-sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-nvim
+```
+sudo apt install exa
 ```
 
-- 추천
-  - [NvChad](https://github.com/NvChad/NvChad)
+#### justfile
+
+```
+wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
+echo "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
+sudo apt update
+```
+
+```
+apt install just
+```
+
+### Proxmox
+
+proxmox를 사용할때는 root유저를 기본으로 사용하도록 되어있어서 `sudo` 패키지가 설치되어있지 않다.
+
+```
+apt install sudo
+```
 
 ## macOS
 
@@ -44,5 +48,3 @@ nvim
 > 필요하다면 ssh 관련 유틸리티만 추가하기
 
 Brewfile을 사용해 homebrew로 필수 프로그램 설치
-
-## Ubuntu
