@@ -1,0 +1,4 @@
+# --- BEGIN   Hansanghyeon/dotfile ---
+import? '.justfile_'
+MANAGER := "pnpm"
+# --- END     Hansanghyeon/dotfile ---
