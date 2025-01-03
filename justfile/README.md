@@ -9,19 +9,21 @@
 `m <command>`
 
 
-## 사용법
+## 자동 설치 방법
+
+```
+curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/install.sh | bash
+```
+
+## 수동 설치 방법
 
 `.justfile`
 
 ```
-############ 재사용 코드블럭
+# --- BEGIN   Hansanghyeon/dotfile ---
 import? '.justfile_'
-
-load:
-  curl https://raw.githubusercontent.com/Hansanghyeon/dotfile/justfile/justfile > .justfile_
-
 MANAGER := "pnpm"
-############
+# --- END     Hansanghyeon/dotfile ---
 ```
 
 `.zshrc`
