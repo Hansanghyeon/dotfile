@@ -22,7 +22,8 @@ if grep -q "^alias m=" ~/.zshrc; then
     fi
 else
     # alias m이 없으므로 추가
-    echo '# https://github.com/Hansanghyeon/dotfile/tree/main/justfile' >> ~/.zshrc
+    echo '# justfile을 효율적으로 사용하기 위한 zsh config' >> ~/.zshrc
+    echo '# 참고 - https://github.com/Hansanghyeon/dotfile/tree/main/justfile' >> ~/.zshrc
     echo 'alias m="just _cmd"' >> ~/.zshrc
     echo "alias m이 성공적으로 추가되었습니다."
 fi
