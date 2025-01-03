@@ -1,8 +1,11 @@
+set quiet
 set positional-arguments
 
+[no-exit-message]
 _run *args:
   {{MANAGER}} {{args}}
 
+[no-exit-message]
 _cmd +args='':
   #!/usr/bin/env bash
   # 1) 원하는 커맨드를 공백으로 구분해 저장
