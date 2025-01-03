@@ -1,0 +1,28 @@
+# justfile
+
+set shell := ["bash", "-cu"]
+
+MANAGER := "pnpm"
+
+dev:
+    {{MANAGER}} run dev --port 20001 --host
+
+storybook:
+    {{MANAGER}} run storybook
+
+run *args:
+    {{MANAGER}} {{args}}
+
+cmd +args='':
+    #!/usr/bin/env bash
+    case "$1" in
+      dev)
+        just dev
+        ;;
+      storybook)
+        just storybook
+        ;;
+      *)
+        just run "$@"
+        ;;
+    esac
