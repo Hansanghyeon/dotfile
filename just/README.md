@@ -1,4 +1,4 @@
-# justfile
+# just
 
 > 2025-01-03 @Hansanghyeon
 
@@ -7,7 +7,6 @@
 어떤 프로젝트이던 `pnpm` `yarn` `npm` `elixir` `go` `python` 어떤 환경이던 동일한 커맨드를 사용하기위하여.
 
 `m <command>`
-
 
 ## 설치
 
@@ -18,7 +17,7 @@ curl -fsSL https://4t.gg/hyeon-dot-just | bash
 ```
 
 ```
-curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/install.sh | bash
 ```
 
 ### 수동 설치 방법

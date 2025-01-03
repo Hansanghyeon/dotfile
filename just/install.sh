@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # URL 정의
-JUSTFILE_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/justfile"
-JUSTFILE_LOAD_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/justfile.load"
+JUSTFILE_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/justfile"
+JUSTFILE_LOAD_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/justfile.load"
 
 # 설치 스크립트 시작
-echo "Hansanghyeon/dotfile - justfile 설정을 시작합니다."
+echo "Hansanghyeon/dotfile - just 설정을 시작합니다."
 
 # .zshrc alias m 처리
 echo ".zshrc에서 alias m을 처리합니다..."
@@ -22,8 +22,8 @@ if grep -q "^alias m=" ~/.zshrc; then
     fi
 else
     # alias m이 없으므로 추가
-    echo '# justfile을 효율적으로 사용하기 위한 zsh config' >> ~/.zshrc
-    echo '# 참고 - https://github.com/Hansanghyeon/dotfile/tree/main/justfile' >> ~/.zshrc
+    echo '# just을 효율적으로 사용하기 위한 zsh config' >> ~/.zshrc
+    echo '# 참고 - https://github.com/Hansanghyeon/dotfile/tree/main/just' >> ~/.zshrc
     echo 'alias m="just _cmd"' >> ~/.zshrc
     echo "alias m이 성공적으로 추가되었습니다."
 fi
