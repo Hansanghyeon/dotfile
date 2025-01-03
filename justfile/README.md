@@ -71,3 +71,44 @@ load:
 MANAGER := "pnpm"
 ############
 ```
+
+`.zshrc`
+
+```
+if alias m &>/dev/null; then
+    unalias m
+fi
+m() {
+    if [ "$1" = "load" ]; then
+        just load
+    else
+        just _cmd "$@"
+    fi
+}
+```
+
+<details>
+<summary><code>.zshrc</code></summary>
+
+```
+/root/.zshrc:60: defining function based on alias `m'
+/root/.zshrc:60: parse error near `()'
+```
+
+해당 이유로 `unalias m`을 추가해줬다 하지만
+
+```
+/root/.zshrc:unalias:60: no such hash table element: m
+```
+
+해당오류가나서
+
+```
+if alias m &>/dev/null; then
+    unalias m
+fi
+```
+
+해당 방법으로 해결하였다.
+
+</details>
