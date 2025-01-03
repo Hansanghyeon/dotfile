@@ -1,6 +1,15 @@
-## node project
+# justfile
 
-`.zshrc`
+> 2025-01-03 @Hansanghyeon
+
+## 컨셉
+
+어떤 프로젝트이던 `pnpm` `yarn` `npm` `elixir` `go` `python` 어떤 환경이던 동일한 커맨드를 사용하기위하여.
+
+`m <command>`
+
+<details>
+<summary><code>.zshrc</code> 히스토리</summary>
 
 ```
 m() {
@@ -13,3 +22,29 @@ m() {
     fi
 }
 ```
+
+just에서 쉘 스크립트 블록을 이용해 해당 분기를 구현할 수 있다.
+
+```
+run *args:
+    {{MANAGER}} {{args}}
+
+cmd +args='':
+    #!/usr/bin/env bash
+    case "$1" in
+      dev)
+        just dev
+        ;;
+      storybook)
+        just storybook
+        ;;
+      *)
+        just cmd "$@"
+        ;;
+    esac
+```
+
+이제 미리 정의된 커맨드로 사용하고싶다면 `cmd`에서 케이스를 분기해주면된다.
+
+</details>
+
