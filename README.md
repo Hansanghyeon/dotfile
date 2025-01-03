@@ -4,7 +4,7 @@
 | [nvim](./nvim/README.md)       | neovim 설정                  |
 | [git](./git/README.md)         | git 설정                     |
 | [tmux](./tmux/README.md)       | tmux 설정                    |
-| [tmux](./just/README.md)       | just 설정                    |
+| [just](./just/README.md)       | just 설정                    |
 
 - **dotfile**은 해당 유저 폴더에 설치하는 것을 권장합니다.
   - 유저폴더에 설치하지 않을때는 `${HOME}/dotfile`을 모두 수정해주세요
