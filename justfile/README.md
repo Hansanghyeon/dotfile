@@ -14,6 +14,10 @@
 ### 자동 설치 방법
 
 ```
+curl -fsSL https://4t.gg/hyeon-dot-just | bash
+```
+
+```
 curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/install.sh | bash
 ```
 
