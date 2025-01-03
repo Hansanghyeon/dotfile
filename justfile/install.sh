@@ -12,7 +12,7 @@ echo ".zshrc에서 alias m을 처리합니다..."
 if grep -q "^alias m=" ~/.zshrc; then
     # alias m이 이미 존재
     ALIAS_CONTENT=$(grep "^alias m=" ~/.zshrc)
-    if [[ "$ALIAS_CONTENT" == 'alias m="just cmd"' ]]; then
+    if [[ "$ALIAS_CONTENT" == 'alias m="just _cmd"' ]]; then
         echo "alias m이 이미 올바르게 설정되어 있습니다."
     else
         echo "alias m이 이미 존재하지만 다른 명령어로 설정되어 있습니다."
@@ -22,7 +22,8 @@ if grep -q "^alias m=" ~/.zshrc; then
     fi
 else
     # alias m이 없으므로 추가
-    echo 'alias m="just cmd"' >> ~/.zshrc
+    echo '# https://github.com/Hansanghyeon/dotfile/tree/main/justfile' >> ~/.zshrc
+    echo 'alias m="just _cmd"' >> ~/.zshrc
     echo "alias m이 성공적으로 추가되었습니다."
 fi
 
