@@ -41,5 +41,5 @@ m() {
 
 ## 이슈
 
-- #1
-- #2
+- https://github.com/Hansanghyeon/dotfile/issues/1
+- https://github.com/Hansanghyeon/dotfile/issues/2
