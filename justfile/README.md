@@ -25,30 +25,49 @@ m() {
 
 just에서 쉘 스크립트 블록을 이용해 해당 분기를 구현할 수 있다.
 
+`.justfile_` 파일로 추가
+
+`_cmd`는 list에 노출되지 않는다.
+
 ```
-run *args:
-    {{MANAGER}} {{args}}
+set positional-arguments
 
-cmd +args='':
-    #!/usr/bin/env bash
+_run *args:
+  {{MANAGER}} {{args}}
 
-    # args를 배열로 파싱
-    # 공백 기준으로 잘라 ARGS라는 배열에 담음
-    read -ra ARGS <<< "{{args}}"
+_cmd +args='':
+  #!/usr/bin/env bash
+  # 1) 원하는 커맨드를 공백으로 구분해 저장
+  USER_COMMAND="$(just --summary)"
+  # 2) USER_COMMAND를 case에 맞는 패턴으로 변환
+  PATTERN=$(echo "$USER_COMMAND" | sed 's/ /|/g')
 
-    cmd="${ARGS[0]}"
-
-    case "$cmd" in
-      example)
-        just example
-        ;;
-      *)
-        just run {{args}}
-        ;;
-    esac
+  case "$1" in
+    ls)
+      just --list --list-prefix '' --list-heading '' --unsorted
+      ;;
+    $PATTERN)
+      just "$1"
+      ;;
+    *)
+      just _run {{args}}
+      ;;
+  esac
 ```
-
-이제 미리 정의된 커맨드로 사용하고싶다면 `cmd`에서 케이스를 분기해주면된다.
 
 </details>
 
+## 사용법
+
+`.justfile`
+
+```
+############ 재사용 코드블럭
+import? '.justfile_'
+
+load:
+  curl https://raw.githubusercontent.com/Hansanghyeon/dotfile/justfile/justfile > .justfile_
+
+MANAGER := "pnpm"
+############
+```
