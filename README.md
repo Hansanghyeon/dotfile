@@ -19,7 +19,7 @@ https://github.com/ogham/exa
 sudo apt install exa
 ```
 
-### justfile
+### just
 
 ```
 wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
@@ -30,6 +30,8 @@ sudo apt update
 ```
 apt install just
 ```
+
+[just 커스텀 설정확인](./just/README.md)
 
 ## Proxmox
 
