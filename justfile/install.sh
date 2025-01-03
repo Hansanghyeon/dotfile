@@ -1,23 +1,29 @@
 #!/bin/bash
 
 # URL 정의
-ZSHRC_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/.zshrc"
 JUSTFILE_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/justfile"
 JUSTFILE_LOAD_URL="https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/justfile.load"
 
 # 설치 스크립트 시작
 echo "Hansanghyeon/dotfile - justfile 설정을 시작합니다."
 
-# .zshrc 업데이트
-echo ".zshrc를 업데이트합니다..."
-curl -fsSL "$ZSHRC_URL" >> ~/.zshrc
-
-if [ $? -eq 0 ]; then
-    echo ".zshrc가 성공적으로 업데이트되었습니다."
+# .zshrc alias m 처리
+echo ".zshrc에서 alias m을 처리합니다..."
+if grep -q "^alias m=" ~/.zshrc; then
+    # alias m이 이미 존재
+    ALIAS_CONTENT=$(grep "^alias m=" ~/.zshrc)
+    if [[ "$ALIAS_CONTENT" == 'alias m="just cmd"' ]]; then
+        echo "alias m이 이미 올바르게 설정되어 있습니다."
+    else
+        echo "alias m이 이미 존재하지만 다른 명령어로 설정되어 있습니다."
+        echo "현재 설정: $ALIAS_CONTENT"
+        echo "스크립트를 종료합니다. 필요시 기존 alias m을 제거하세요."
+        exit 1
+    fi
 else
-    echo ".zshrc 업데이트에 실패했습니다. 인터넷 연결 또는 URL을 확인하세요."
-    echo "$ZSHRC_URL"
-    exit 1
+    # alias m이 없으므로 추가
+    echo 'alias m="just cmd"' >> ~/.zshrc
+    echo "alias m이 성공적으로 추가되었습니다."
 fi
 
 # .justfile_ 다운로드
