@@ -41,5 +41,5 @@ m() {
 
 ## 이슈
 
-- https://github.com/Hansanghyeon/dotfile/issues/1
-- https://github.com/Hansanghyeon/dotfile/issues/2
+- [[justfile] justfile 원격으로 사용하기 · Issue #2 · Hansanghyeon/dotfile](https://github.com/Hansanghyeon/dotfile/issues/2)
+- [[justfile] \`.zshrc\` 함수를 이용한 방법에서 justfile 커맨드로 이동하기 · Issue #1 · Hansanghyeon/dotfile](https://github.com/Hansanghyeon/dotfile/issues/1)
