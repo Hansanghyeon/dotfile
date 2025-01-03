@@ -31,15 +31,25 @@ run *args:
 
 cmd +args='':
     #!/usr/bin/env bash
-    case "$1" in
-      dev)
-        just dev
-        ;;
-      storybook)
-        just storybook
+
+    # args를 배열로 파싱
+    # 공백 기준으로 잘라 ARGS라는 배열에 담음
+    read -ra ARGS <<< "{{args}}"
+
+    # 첫 번째 인자를 subcmd로
+    subcmd="${ARGS[0]}"
+
+    # 첫 번째 인자를 제거한 나머지를 ARGS로 다시 할당
+    ARGS=("${ARGS[@]:1}")
+
+    case "$subcmd" in
+      example)
+        just example
         ;;
       *)
-        just cmd "$@"
+        # 첫 인자가 dev|storybook|deploy가 아닐 경우,
+        # (첫 인자 + 나머지 인자들)을 전부 just run으로 전달
+        just run "$subcmd" "${ARGS[@]}"
         ;;
     esac
 ```
