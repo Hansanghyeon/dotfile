@@ -9,13 +9,15 @@
 `m <command>`
 
 
-## 자동 설치 방법
+## 설치
+
+### 자동 설치 방법
 
 ```
 curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/justfile/install.sh | bash
 ```
 
-## 수동 설치 방법
+### 수동 설치 방법
 
 `.justfile`
 
