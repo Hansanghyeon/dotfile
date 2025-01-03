@@ -47,7 +47,6 @@ cmd +args='':
         just example
         ;;
       *)
-        # 첫 인자가 dev|storybook|deploy가 아닐 경우,
         # (첫 인자 + 나머지 인자들)을 전부 just run으로 전달
         just run "$subcmd" "${ARGS[@]}"
         ;;
