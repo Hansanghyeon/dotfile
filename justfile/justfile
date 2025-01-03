@@ -1,32 +1,23 @@
-# justfile
+set positional-arguments
 
-set shell := ["bash", "-cu"]
+_run *args:
+  {{MANAGER}} {{args}}
 
-MANAGER := "npm"
+_cmd +args='':
+  #!/usr/bin/env bash
+  # 1) 원하는 커맨드를 공백으로 구분해 저장
+  USER_COMMAND="$(just --summary)"
+  # 2) USER_COMMAND를 case에 맞는 패턴으로 변환
+  PATTERN=$(echo "$USER_COMMAND" | sed 's/ /|/g')
 
-pre_example:
-    echo "pre_example"
-
-example: pre_example
-    echo {{MANAGER}}
-
-run *args:
-    {{MANAGER}} {{args}}
-
-cmd +args='':
-    #!/usr/bin/env bash
-
-    # args를 배열로 파싱
-    # 공백 기준으로 잘라 ARGS라는 배열에 담음
-    read -ra ARGS <<< "{{args}}"
-
-    cmd="${ARGS[0]}"
-
-    case "$cmd" in
-      example)
-        just example
-        ;;
-      *)
-        just run {{args}}
-        ;;
-    esac
+  case "$1" in
+    ls)
+      just --list --list-prefix '' --list-heading '' --unsorted
+      ;;
+    $PATTERN)
+      just "$1"
+      ;;
+    *)
+      just _run {{args}}
+      ;;
+  esac
