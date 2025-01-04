@@ -30,7 +30,7 @@ fi
 
 # .justfile_ 다운로드
 echo ".justfile_을 다운로드합니다..."
-curl -fsSL "$JUSTFILE_URL" > ~/.justfile_
+curl -fsSL "$JUSTFILE_URL" > ./.justfile_
 
 if [ $? -eq 0 ]; then
     echo ".justfile_이 성공적으로 다운로드되었습니다"
