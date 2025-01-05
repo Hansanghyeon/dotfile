@@ -9,7 +9,7 @@ alias ls="exa --long --time-style=long-iso"
 # alias ls="ls --time-style=long-iso --color=auto --group-directories-first"
 
 # require
-source "${HOME}/dotfile/zsh/zoxide.zsh"
+source "$(dirname $0)/zoxide.zsh"
 
 # zinit
 zinit for \
