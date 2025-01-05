@@ -10,7 +10,7 @@
 
 ## 설치
 
-### 자동 설치 방법
+### 자동 설치
 
 ```
 curl -fsSL https://4t.gg/hyeon-dot-just | bash
@@ -20,7 +20,7 @@ curl -fsSL https://4t.gg/hyeon-dot-just | bash
 curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/install.sh | bash
 ```
 
-### 수동 설치 방법
+### 수동 설치
 
 `.justfile`
 
@@ -34,16 +34,7 @@ MANAGER := "pnpm"
 `.zshrc`
 
 ```
-if alias m &>/dev/null; then
-    unalias m
-fi
-m() {
-    if [ "$1" = "load" ]; then
-        just load
-    else
-        just _cmd "$@"
-    fi
-}
+alias m='just m'
 ```
 
 ## 이슈
