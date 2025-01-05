@@ -17,7 +17,7 @@ curl -fsSL https://4t.gg/hyeon-dot-just | bash
 ```
 
 ```
-curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/setup.sh | bash
 ```
 
 ### 수동 설치
