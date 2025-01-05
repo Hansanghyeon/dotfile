@@ -8,7 +8,7 @@ alias ls="exa --long --time-style=long-iso"
 # ls관련 유틸리티 사용하지 않은면 아래 주석해제 위는 주석처리
 # alias ls="ls --time-style=long-iso --color=auto --group-directories-first"
 
-# require
+# autojump 대안
 source "$(dirname $0)/zoxide.zsh"
 
 # zinit
