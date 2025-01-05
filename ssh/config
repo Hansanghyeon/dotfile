@@ -1,0 +1,26 @@
+Host *
+  IdentityAgent ~/.1password/agent.sock
+  IdentitiesOnly yes
+
+## hyeon infra
+## 해당설정은 vscode remote ssh 때문에 추가
+
+Host imweb
+  HostName imweb
+  User root
+
+Host apps
+  HostName apps
+  User root
+
+Host hyeon
+  HostName hyeon
+  User root
+
+Host beeclover
+  HostName beeclover
+  User root
+
+Host media
+  HostName media
+  User root
