@@ -1,4 +1,0 @@
-# justfile
-
-init:
-    echo 'source "${HOME}/dotfile/zsh/config.zsh"' >> "${HOME}/.zshrc"
