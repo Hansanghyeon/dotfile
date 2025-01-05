@@ -7,6 +7,6 @@ zinit으로 zsh 통합관리
 1. https://github.com/zdharma-continuum/zinit#install
 
 ```sh
-apt install zoxide
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 ```
 
