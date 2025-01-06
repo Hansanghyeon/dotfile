@@ -56,16 +56,16 @@ if [ -f ./justfile ]; then
     if ! grep -q "Hansanghyeon/dotfile" ./justfile; then
         # 기존 내용을 임시 파일로 백업
         mv ./justfile ./justfile.bak
-        echo "$JUSTFILE_LOAD_CONTENT" > ./justfile
-        cat ./justfile.bak >> ./justfile
+        echo "$JUSTFILE_LOAD_CONTENT" > ./.justfile
+        cat ./justfile.bak >> ./.justfile
         rm ./justfile.bak
-        echo "justfile이 성공적으로 업데이트되었습니다"
+        echo "justfile이 성공적으로 업데이트되었습니다 (.justfile 파일이름 변경)"
     else
         echo "justfile에 이미 Hansanghyeon/dotfile 설정이 존재합니다"
     fi
 else
     # justfile이 없는 경우 새로 생성
-    echo "$JUSTFILE_LOAD_CONTENT" > ./justfile
+    echo "$JUSTFILE_LOAD_CONTENT" > ./.justfile
     echo "새로운 justfile이 생성되었습니다"
 fi
 
