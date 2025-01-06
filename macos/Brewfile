@@ -21,6 +21,7 @@ brew "jkfran/killport/killport"
 cask "tableplus"
 cask "transmit"
 brew "ccat"
+brew "zoxide"
 
 # cask
 ## killer 프로그램
