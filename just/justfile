@@ -7,20 +7,13 @@ _run *args:
 
 [no-exit-message]
 _cmd +args='':
-  #!/usr/bin/env bash
-  # 1) 원하는 커맨드를 공백으로 구분해 저장
+  #!/usr/bin/env zsh
   USER_COMMAND="$(just --summary)"
-  # 2) USER_COMMAND를 case에 맞는 패턴으로 변환
-  PATTERN=$(echo "$USER_COMMAND" | sed 's/ /|/g')
 
-  case "$1" in
-    ls)
-      just --list --list-prefix '' --list-heading '' --unsorted
-      ;;
-    $PATTERN)
-      just "$1"
-      ;;
-    *)
-      just _run {{args}}
-      ;;
-  esac
+  if [[ $USER_COMMAND == *$1* ]]; then
+    just "$1"
+  elif [[ "ls" == "$1" ]]; then
+    just --list --list-prefix '' --list-heading '' --unsorted
+  else
+    just _run {{args}}
+  fi
