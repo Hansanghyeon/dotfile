@@ -68,6 +68,3 @@ else
     echo "$JUSTFILE_LOAD_CONTENT" > ./.justfile
     echo "새로운 justfile이 생성되었습니다"
 fi
-
-# 설치 완료 메시지
-echo "설치가 성공적으로 완료되었습니다. 터미널을 재시작하거나 'source ~/.zshrc' 명령어를 실행하여 변경 사항을 적용하세요"
