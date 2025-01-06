@@ -1,3 +1,7 @@
+# backup
+cask "syncthing"
+cask "docker"
+
 # dev
 brew "tmux"
 brew "tree"
@@ -9,8 +13,7 @@ brew "curl"
 # brew "erlang"
 # brew "elixir"
 # brew "go"
-tap "homebrew/cask-fonts"
-brew "font-hack-nerd-font"
+cask "font-hack-nerd-font"
 cask "iterm2"
 cask "visual-studio-code"
 tap "jkfran/killport"
@@ -18,7 +21,6 @@ brew "jkfran/killport/killport"
 cask "tableplus"
 cask "transmit"
 brew "ccat"
-brew "diff-so-fancy"
 
 # cask
 ## killer 프로그램
@@ -39,11 +41,8 @@ cask "devtoys"
 cask "google-chrome"
 cask "keka"
 cask "slack"
-cask "docker"
-cask "syncthing"
 cask "telegram"
 cask "iina"
-tap "1password/tap"
 
 # mas
 mas "Amphetamine", id: 937984704
