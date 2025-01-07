@@ -8,7 +8,7 @@ _run *args:
 [no-exit-message]
 _cmd +args='':
   #!/usr/bin/env zsh
-  USER_COMMAND="$(just --summary)"
+  USER_COMMAND="$(just --summary -q)"
 
   if [[ $USER_COMMAND == *$1* ]]; then
     just "$1"
