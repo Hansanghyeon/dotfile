@@ -6,12 +6,16 @@
 
 ### 사전설치 (수동으로 해줘야함)
 
-zinit으로 zsh 통합관리
-
-https://github.com/zdharma-continuum/zinit#install
+zinit 설치
 
 ```sh
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+```
+
+zoxide 설치
+
+```sh
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
 ### 자동설치
