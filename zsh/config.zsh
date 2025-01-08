@@ -19,7 +19,7 @@ alias ls="exa --long --time-style=long-iso"
 source "$(dirname $0)/zoxide.zsh"
 
 # zinit
-zinit for \
-  light-mode romkatv/powerlevel10k \
-  light-mode zsh-users/zsh-autosuggestions \
-  light-mode zdharma-continuum/fast-syntax-highlighting
+zi light romkatv/powerlevel10k
+zi light-mode zsh-users/zsh-autosuggestions
+zi light-mode zdharma-continuum/fast-syntax-highlighting
+zi snippet OMZP::git
