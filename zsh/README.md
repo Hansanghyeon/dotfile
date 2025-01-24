@@ -32,8 +32,10 @@ export PATH=$PATH:/root/.local/bin
 
 #### exa 설치
 
+https://github.com/ogham/exa
+
 ```
-apt install exa
+sudo apt install exa
 ```
 
 ### 자동설치
