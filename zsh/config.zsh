@@ -20,6 +20,6 @@ source "$(dirname $0)/zoxide.zsh"
 
 # zinit
 zi light romkatv/powerlevel10k
-zi light-mode zsh-users/zsh-autosuggestions
-zi light-mode zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma-continuum/fast-syntax-highlighting
 zi snippet OMZP::git
