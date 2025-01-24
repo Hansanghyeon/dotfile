@@ -20,7 +20,7 @@ sudo apt update
 apt install just
 ```
 
-### 자동 설치
+### script 자동 설치
 
 ```
 curl -fsSL https://4t.gg/hyeon-dot-just | bash
@@ -30,7 +30,7 @@ curl -fsSL https://4t.gg/hyeon-dot-just | bash
 curl -fsSL https://raw.githubusercontent.com/Hansanghyeon/dotfile/refs/heads/main/just/setup.sh | bash
 ```
 
-### 수동 설치
+### script 수동 설치
 
 `.justfile`
 
