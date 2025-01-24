@@ -11,28 +11,6 @@
 
 ## OS공통
 
-### exa
-
-https://github.com/ogham/exa
-
-```
-sudo apt install exa
-```
-
-### just
-
-```
-wget -qO - 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
-echo "deb [arch=all,$(dpkg --print-architecture) signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
-sudo apt update
-```
-
-```
-apt install just
-```
-
-[just 커스텀 설정확인](./just/README.md)
-
 ## Proxmox
 
 proxmox를 사용할때는 root유저를 기본으로 사용하도록 되어있어서 `sudo` 패키지가 설치되어있지 않다.
