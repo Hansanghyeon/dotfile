@@ -10,3 +10,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.softtabstop = 2
 	end
 })
+
+-- 내 서버 vim에서는 항상 preview가 나오고 ui가 깨지는 현상이있다. 해당 옵션으로 문제를 해결할 수 있음
+vim.o.pumblend = 0
