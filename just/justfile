@@ -6,6 +6,16 @@ _run *args:
   {{MANAGER}} {{args}}
 
 [no-exit-message]
+_command *args:
+  #!/usr/bin/env zsh
+
+  # `docker context ls`에서 `default` 제외한 컨텍스트 목록을 가져오기
+  CONTEXTS=($(docker context ls --quiet | grep -v '^default'))  # Zsh 배열로 저장
+  CONTEXT_COUNT=${#CONTEXTS[@]}  # 배열 길이로 개수 계산
+
+  parallel -j $CONTEXT_COUNT "echo 'DOCKER_CONTEXT={}' && DOCKER_CONTEXT={} {{MANAGER}} {{args}} && echo''" ::: "${CONTEXTS[@]}"
+
+[no-exit-message]
 _cmd +args='':
   #!/usr/bin/env zsh
   USER_COMMAND="$(just --summary -q)"
@@ -14,6 +24,8 @@ _cmd +args='':
     just "$1"
   elif [[ "ls" == "$1" ]]; then
     just --list --list-prefix '' --list-heading '' --unsorted
+  elif [[ "$DOCKER_CONTEXT_COMMANDER" == "true" && "{{MANAGER}}" == "docker compose" ]]; then
+    just _command {{args}}
   else
     just _run {{args}}
   fi
