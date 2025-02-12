@@ -28,15 +28,20 @@ else
     echo "alias m이 성공적으로 추가되었습니다."
 fi
 
-# .justfile_ 다운로드
+# .justfile_ 다운로드 (임시 파일을 이용해 안전하게 업데이트)
+# .justfile은 항상 저장소의 내용을 최우선으로 하기 때문에 덮어씌운다
 echo ".justfile_을 다운로드합니다..."
-curl -fsSL "$JUSTFILE_URL" > ./.justfile_
+TMPFILE=$(mktemp)
 
+curl -fsSL "$JUSTFILE_URL" -o "$TMPFILE"
 if [ $? -eq 0 ]; then
+    # 다운로드 성공 시 임시 파일의 내용을 .justfile_로 이동하여 덮어쓰기
+    mv "$TMPFILE" ./.justfile_
     echo ".justfile_이 성공적으로 다운로드되었습니다"
 else
-    echo ".justfile_ 다운로드에 실패했습니다. 인터넷 연결 또는 URL을 확인하세요"
+    echo ".justfile_ 다운로드에 실패했습니다. (이슈를 남겨주세요: https://4t.gg/hyeon-dot-issue)"
     echo "$JUSTFILE_URL"
+    rm -f "$TMPFILE"
     exit 1
 fi
 
@@ -45,7 +50,7 @@ echo "justfile을 업데이트합니다..."
 JUSTFILE_LOAD_CONTENT=$(curl -fsSL "$JUSTFILE_LOAD_URL")
 
 if [ $? -ne 0 ]; then
-    echo "justfile.load를 다운로드하는 데 실패했습니다. 인터넷 연결 또는 URL을 확인하세요"
+    echo ".justfile 다운로드하는 데 실패했습니다. (이슈를 남겨주세요: https://4t.gg/hyeon-dot-issue)"
     echo "$JUSTFILE_LOAD_URL"
     exit 1
 fi
