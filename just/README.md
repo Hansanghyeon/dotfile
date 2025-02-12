@@ -52,6 +52,12 @@ MANAGER := "pnpm"
 alias m='just m'
 ```
 
+## 커맨드 서버용 추가
+
+`DOCKER_CONTEXT_COMMANDER` 환경변수를 통해서 parallel 명령어를 실행할수있는 스크립트를 추가하였다.
+
+MANAGER가 `docker compose`이면서 `DOCKER_CONTEXT_COMMANDER=true`라면 실행된다.
+
 ## 이슈
 
 - [[justfile] justfile 원격으로 사용하기 · Issue #2 · Hansanghyeon/dotfile](https://github.com/Hansanghyeon/dotfile/issues/2)
