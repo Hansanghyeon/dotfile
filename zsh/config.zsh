@@ -10,7 +10,7 @@ alias dps="docker ps"
 
 # utils
 # alias cat="ccat"
-alias ls="exa --long --time-style=long-iso"
+# alias ls="exa --long --time-style=long-iso"
 # ls관련 유틸리티 사용하지 않은면 아래 주석해제 위는 주석처리
 # alias ls="lsd --long --date date"
 
