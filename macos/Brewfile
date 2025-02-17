@@ -3,8 +3,7 @@ cask "syncthing"
 cask "docker"
 
 # ai
-cask chatgpt
-cask cursor
+cask "chatgpt"
 
 # dev
 brew "tmux"
@@ -19,11 +18,14 @@ brew "curl"
 # brew "go"
 cask "font-hack-nerd-font"
 cask "iterm2"
-cask "visual-studio-code"
+cask "cursor"
+  # cask "visual-studio-code"
+cask font-ibm-plex-sans
+cask font-ibm-plex-mono
 tap "jkfran/killport"
 brew "jkfran/killport/killport"
 cask "tableplus"
-cask "transmit"
+# cask "transmit"
 brew "ccat"
 brew "zoxide"
 
@@ -53,6 +55,7 @@ cask "bettertouchtool"
 
 cask "spotify"
 cask "notion"
+cask "shottr"
 
 # mas
 mas "Amphetamine", id: 937984704
