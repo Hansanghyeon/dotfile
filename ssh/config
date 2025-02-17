@@ -5,20 +5,8 @@ Host *
 ## hyeon infra
 ## 해당설정은 vscode remote ssh 때문에 추가
 
-Host imweb
-  HostName imweb
-  User root
-
-Host apps
-  HostName apps
-  User root
-
-Host hyeon
-  HostName hyeon
-  User root
-
-Host beeclover
-  HostName beeclover
+Host dev
+  HostName dev
   User root
 
 Host media
