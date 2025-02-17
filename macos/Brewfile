@@ -2,6 +2,10 @@
 cask "syncthing"
 cask "docker"
 
+# ai
+cask chatgpt
+cask cursor
+
 # dev
 brew "tmux"
 brew "tree"
@@ -44,6 +48,11 @@ cask "keka"
 cask "slack"
 cask "telegram"
 cask "iina"
+cask "linearmouse"
+cask "bettertouchtool"
+
+cask "spotify"
+cask "notion"
 
 # mas
 mas "Amphetamine", id: 937984704
@@ -57,3 +66,5 @@ mas "KakaoTalk", id: 869223134
 mas "Calendar 366 II", id: 1265895169
 mas "PDF Expert - Editor and Reader", id: 743974925
 mas "Dropover - Easier Drag & Drop", id: 1355679052
+mas "PDF Expert - Editor and Reader", id: 743974925
+mas "Microsoft Excel", id: 586683407
