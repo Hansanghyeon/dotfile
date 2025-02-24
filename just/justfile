@@ -21,7 +21,7 @@ _cmd +args='':
   USER_COMMAND="$(just --summary -q)"
 
   if [[ $USER_COMMAND == *$1* ]]; then
-    just "$1"
+    just "$@"
   elif [[ "ls" == "$1" ]]; then
     just --list --list-prefix '' --list-heading '' --unsorted
   elif [[ "$DOCKER_CONTEXT_COMMANDER" == "true" && "{{MANAGER}}" == "docker compose" ]]; then
