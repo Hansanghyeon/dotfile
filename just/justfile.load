@@ -1,4 +1,4 @@
 # --- BEGIN   Hansanghyeon/dotfile ---
 import? '.justfile_'
-MANAGER := "pnpm"
+MANAGER := "yarn"
 # --- END     Hansanghyeon/dotfile ---
