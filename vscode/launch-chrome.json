@@ -6,7 +6,10 @@
       "request": "launch",
       "name": "크롬개발",
       "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": [
+        "--incognito"
+      ]
     }
   ]
 }
