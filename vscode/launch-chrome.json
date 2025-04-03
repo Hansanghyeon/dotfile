@@ -5,11 +5,27 @@
       "type": "chrome",
       "request": "launch",
       "name": "크롬개발",
-      "url": "http://localhost:5173",
+      "url": "http://localhost:24000",
       "webRoot": "${workspaceFolder}",
       "runtimeArgs": [
         "--incognito"
       ]
+    },
+    {
+      "command": "just _cmd dev",
+      "name": "Run Dev Server",
+      "request": "launch",
+      "type": "node-terminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "개발시작",
+      "configurations": [
+        "Run Dev Server",
+        "크롬개발"
+      ],
+      "stopAll": true
     }
   ]
 }
